@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Profile = ({
   user: {
     username,
@@ -6,18 +8,44 @@ export const Profile = ({
     avatar,
     stats: { followers, views, likes },
   },
-}) => (
-  <div>
+}) => {
+  return (
     <div>
-      <img src={avatar} alt={username} width={120} />
-      <p>{username}</p>
-      <p>{tag}</p>
-      <p>{location}</p>
+      <div>
+        <img src={avatar} alt={username} width={120} />
+        <p>{username}</p>
+        <p>{tag}</p>
+        <p>{location}</p>
+      </div>
+
       <ul>
-        <li>{followers}</li>
-        <li>{views}</li>
-        <li>{likes}</li>
+        <li>
+          <span>Follwers</span>
+          <span>{followers}</span>
+        </li>
+        <li>
+          <span>Views</span>
+          <span>{views}</span>
+        </li>
+        <li>
+          <span>Likes</span>
+          <span>{likes}</span>
+        </li>
       </ul>
     </div>
-  </div>
-);
+  );
+};
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
