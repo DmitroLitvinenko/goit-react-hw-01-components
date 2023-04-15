@@ -5,7 +5,6 @@ import transactions from '../transactions.json';
 import { Profile } from './Profile/Profile';
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import { GlobalStyle } from './GlobalStyle';
-
 import { FriendsList } from './FriendsList/FriendsList';
 import { TransactionHistoryList } from './TransactionHistoryList/TansactionHistoryList';
 

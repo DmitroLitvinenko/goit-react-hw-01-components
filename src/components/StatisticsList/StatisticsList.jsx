@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 
 import { StatisticsItem } from '../StatisticsItem/StatisticsItem.jsx';
+import { Container, List } from './StatisticsList.styled.jsx';
+import { randomHex } from 'randomize-hex';
 
 export const StatisticsList = ({ items, title }) => {
   return (
-    <section>
+    <Container>
       {title && title.length > 0 && <h2>{title}</h2>}
 
-      <ul>
+      <List>
         {items.map(item => (
-          <li key={item.id}>
+          <li key={item.id} style={{ backgroundColor: randomHex() }}>
             <StatisticsItem item={item} />
           </li>
         ))}
-      </ul>
-    </section>
+      </List>
+    </Container>
   );
 };
 
