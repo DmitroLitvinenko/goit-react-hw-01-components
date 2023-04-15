@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { StatisticsItem } from './StatisticsItem.jsx';
+import { StatisticsItem } from '../StatisticsItem/StatisticsItem.jsx';
 
 export const StatisticsList = ({ items, title }) => {
   return (
