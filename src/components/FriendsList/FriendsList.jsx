@@ -13,7 +13,7 @@ export const FriendsList = ({ friends }) => {
   );
 };
 
-FriendsList.propTypes ={
+FriendsList.propTypes = {
   friends: PropTypes.array.isRequired,
   id: PropTypes.string,
-}
+};
