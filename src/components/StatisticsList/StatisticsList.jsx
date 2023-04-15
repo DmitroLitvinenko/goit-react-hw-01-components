@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StatisticsItem } from '../StatisticsItem/StatisticsItem.jsx';
 import { Container, List } from './StatisticsList.styled.jsx';
 import { randomHex } from 'randomize-hex';
+import { Item } from 'components/StatisticsItem/StatisticsItem.styled.jsx';
 
 export const StatisticsList = ({ items, title }) => {
   return (
@@ -11,9 +12,9 @@ export const StatisticsList = ({ items, title }) => {
 
       <List>
         {items.map(item => (
-          <li key={item.id} style={{ backgroundColor: randomHex() }}>
+          <Item key={item.id} style={{ backgroundColor: randomHex() }}>
             <StatisticsItem item={item} />
-          </li>
+          </Item>
         ))}
       </List>
     </Container>

@@ -7,15 +7,16 @@ import { StatisticsList } from './StatisticsList/StatisticsList';
 import { GlobalStyle } from './GlobalStyle';
 import { FriendsList } from './FriendsList/FriendsList';
 import { TransactionHistoryList } from './TransactionHistoryList/TansactionHistoryList';
+import { Layout } from './Layout/Layout';
 
 export const App = () => {
   return (
-    <div>
+    <Layout>
       <Profile user={user} />
       <StatisticsList items={data} title={'Upload stats'} />
       <FriendsList friends={friends} />
       <TransactionHistoryList transactions={transactions} />
       <GlobalStyle />
-    </div>
+    </Layout>
   );
 };

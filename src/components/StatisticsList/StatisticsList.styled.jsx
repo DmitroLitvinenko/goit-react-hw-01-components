@@ -10,9 +10,5 @@ export const List = styled.ul`
   display: flex;
 
   li {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 25px;
   }
 `;
